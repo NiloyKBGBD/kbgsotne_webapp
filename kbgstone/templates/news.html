@@ -1,0 +1,220 @@
+{% extends 'base.html' %}   
+{% block content %}
+{% load static %}
+
+
+{% comment %} <style>
+    .blog-page {
+      padding-top: 20%;
+    }
+    
+    .blog-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .blog-box {
+      width: 30%;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .blog-box h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    
+    .blog-box img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    
+    .blog-box p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .blog-box a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #4caf50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    </style>
+
+<div class="blog-container">
+    
+  {% for blog_post in blog_posts %}
+  <br> <br> <br> <br> <br>
+  <div class="blog-box">
+      <h2>{{ blog_post.title }}</h2>
+      <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}">
+
+      <p>{{ blog_post.text }}</p>
+
+      {% if blog_post.video %}
+      <div class="video-container">
+          <iframe src="{{ blog_post.video }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      {% endif %}
+
+      {% if blog_post.link %}
+      <a href="{{ blog_post.link }}">Read more</a>
+      {% endif %}
+  </div>
+  {% endfor %}
+</div> {% endcomment %}
+
+
+
+
+<style>
+ .blog-page {
+   padding-top: 10%;
+   }
+      
+  @media (max-width: 767px) {
+    .blog-page {
+       padding-top: 30%;
+     }
+    }
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-box {
+  width: 30%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.blog-box h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.blog-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content {
+  max-width: 800px;
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.popup img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.popup p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.popup a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+</style>
+
+<div class="blog-page">
+    <h1>BLOG</h1>
+  <div class="blog-container">
+    
+    {% for blog_post in blog_posts %}
+    <div class="blog-box" onclick="openPopup('{{ blog_post.title }}', '{{ blog_post.image.url }}', '{{ blog_post.text }}', '{{ blog_post.video }}', '{{ blog_post.link }}')">
+      <h2>{{ blog_post.title }}</h2>
+      <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}">
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2 id="popup-title"></h2>
+    <img id="popup-image" src="" alt="">
+    <p id="popup-text"></p>
+    <div id="popup-video"></div>
+    <a id="popup-link" href="#" target="_blank"></a>
+    <button class="close-button" onclick="clsPopup()">Close</button>
+  </div>
+</div>
+
+<script>
+function openPopup(title, image, text, video, link) {
+  document.getElementById("popup-title").innerText = title;
+  document.getElementById("popup-image").src = image;
+  document.getElementById("popup-text").innerHTML = text;
+  document.getElementById("popup-video").innerHTML = video ? `<iframe src="${video}" frameborder="0" allowfullscreen></iframe>` : "";
+  document.getElementById("popup-link").href = link;
+  document.getElementById("popup").classList.add("open");
+}
+
+function clsPopup() {
+  document.getElementById("popup").classList.remove("open");
+}
+</script>
+
+
+
+
+{% endblock content %}

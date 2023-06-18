@@ -1,0 +1,494 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Welcome to <span>KBG stone</span></h1>
+        <h2>"Transform your space with elegance and durability - KBG Marble, your premier source for wholesale marble and granite slabs in Australia."</h2>
+        <div class="btns">
+            <a href="{% url 'product_list' %}" class="btn-menu animated fadeInUp scrollto">Our Stones</a> 
+            <a href="{% url 'appointment' %}" class="btn-book animated fadeInUp scrollto">Book an appointment</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://youtu.be/C1Ua8gM0bTc" class="glightbox play-btn"></a> 
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+              <div class="about-img">
+                <img src="{% static 'assets/img/Stone/marble/circle/bgnew.jpg' %}" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+              <h3>Australia's Top Marble Company Which Provides A Grade Quality. Retailer Manufacturer & Wholesaler.</h3>
+              <p class="fst-italic">
+                Our customers LOVE OUR MARBLES! Are you searching for the most exquisite, modern, and premium Marbles and Tiles for your home or office? 
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> From all over Australia, you can choose from more blends, colors, & styles below.</li>
+                <li><i class="bi bi-check-circle"></i> Today we are counted amongst the Best Marble Slabs Manufacturer in Austrlia. KBG Stone.</li>
+                <li><i class="bi bi-check-circle"></i> One of the top Marble Companies in Austrlia offers high quality marble slabs for your bathroom vanities, walls, showers and more. If you are looking for more colors you can find them in our inventory below</li>
+              </ul>
+              <p>
+                Our company is a premier Manufacturer, Retailer and Wholesaler of Marble Slabs,
+                 Marble Tiles and Marble Blocks of various colors like the fastest moving. 
+                 KBG Stone offer various Marbles in various sizes and finishes in the form of slabs & steps risers etc.
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      <!-- End About Section -->
+      
+      <!-- ======= Why Us Section ======= -->
+      <section id="why-us" class="why-us">
+        <div class="container" data-aos="fade-up">
+      
+          <div class="section-title">
+            <h2>Why Us</h2>
+            <p>Why Choose Our Stone</p>
+          </div>
+      
+          <div class="row">
+      
+            <div class="col-lg-4">
+              <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                <span>01</span>
+                <h4>Quality</h4>
+                <p>Be 100% Assured for Best Quality</p>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <div class="box" data-aos="zoom-in" data-aos-delay="200">
+                <span>02</span>
+                <h4>Fair pricing</h4>
+                <p>Be 100% assured about our Pricing</p>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                <span>03</span>
+                <h4> Services</h4>
+                <p>we are always ready to serve you</p>
+              </div>
+            </div>
+      
+          </div>
+      
+        </div>
+      </section>
+      
+      
+      
+
+      <!-- ======= Menu Section ======= -->
+      <section id="menu" class="menu section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Stones</h2>
+                <p>Check Our Mesmerizing Marbles</p>
+              </div>
+              
+              <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12 d-flex justify-content-center">
+                  <ul id="menu-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-starters">Rare</li>
+                    <li data-filter=".filter-salads">Unique</li>
+                    <li data-filter=".filter-specialty">Special</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+              
+                <div class="col-lg-6 menu-item filter-starters">
+                  <img src="{% static 'assets/img/MARBEL/Frame 1 (1).png' %}" class="menu-img" alt="">
+                  <div class="menu-content">
+                    <a href="{% url 'product_detail' product_id=6 %}">Crema Penta Light</a>
+                   
+                  </div>
+                  <div class="menu-ingredients">
+                    Crema Penta Light is a stunning natural stone ,
+                    <br> that is known for its soft, creamy tones and delicate veining.
+                    <a href="{% url 'product_detail' product_id=6 %}">Learn More</a>
+                  </div>
+                </div>
+              
+                <div class="col-lg-6 menu-item filter-specialty">
+                  <img src="{% static 'assets\img\MARBEL\Frame 1 (2).png' %}" class="menu-img" alt="">
+                  <div class="menu-content">
+                    <a href="{% url 'product_detail' product_id=2 %}">Mugla White</a>
+                  </div>
+                  <div class="menu-ingredients">
+                    Mugla White is known for its crisp white background and subtle grey veining.
+                    <br>
+                    <a href="{% url 'product_detail' product_id=2 %}">Learn More</a>
+                  </div>
+                </div>
+              
+                <div class="col-lg-6 menu-item filter-starters">
+                  <img src="{% static 'assets\img\MARBEL\Frame 1 (3).png' %}" class="menu-img" alt="">
+                  <div class="menu-content">
+                    <a href="{% url 'product_detail' product_id=10 %}">Calacatta corchia</a>
+                  </div>
+                  <div class="menu-ingredients">
+                    Calacatta Corchia has hints of cream in its signature veining, 
+                    <br>combined with gossamer wisps of grey, and strands of taupe and charcoal,
+                     <br>creating a dark dramatic mix that contrasts with its cool white background
+     
+                    <br>
+                    <a href="{% url 'product_detail' product_id=10 %}">Learn More</a>
+                  </div>
+                </div>
+              
+                <div class="col-lg-6 menu-item filter-salads">
+                  <img src="{% static 'assets\img\MARBEL\Frame 1 (4).png' %}" class="menu-img" alt="">
+                  <div class="menu-content">
+                    <a href="{% url 'product_detail' product_id=7 %}">Crema Penta Dark</a>
+                  </div>
+                  <div class="menu-ingredients">
+                    Crema Penta Dark is a beautiful natural stone ,
+                    <br> that is known for its rich, warm tones and intricate veining.
+                    <a href="{% url 'product_detail' product_id=7 %}">Learn More</a>
+                  </div>
+                </div>
+              
+                <div class="col-lg-6 menu-item filter-specialty">
+                  <img src="{% static 'assets\img\MARBEL\Frame 1 (5).png' %}" class="menu-img" alt="">
+                  <div class="menu-content">
+                    <a href="{% url 'product_detail' product_id=1 %}">Calacatta Oro</a>
+                  </div>
+                  <div class="menu-ingredients">
+                    Calacatta Oro is a luxurious and elegant natural stone 
+                    <br> that is known for its stunning white background and bold, golden veining.
+                    <br>
+                    <a href="{% url 'product_detail' product_id=1 %}">Learn More</a> 
+                  </div>
+                
+                </div>
+              
+                <div class="col-lg-6 menu-item filter-starters">
+                  <img src="{% static 'assets\img\MARBEL\Frame 1 (6).png' %}" class="menu-img" alt="">
+                  <div class="menu-content">
+                    <a href="{% url 'product_detail' product_id=3 %}">Zebrino</a>
+                </div>
+                <div class="menu-ingredients">
+                  Zebrino marble is a beautiful natural stone,
+                  <br> that is characterized by its distinctive white and black stripes
+                  <a href="{% url 'product_detail' product_id=3 %}">Learn More</a>  
+                 
+                  
+                </div>
+              </div>
+        
+              <div class="col-lg-6 menu-item filter-salads">
+                <img src="{% static 'assets\img\MARBEL\Frame 1 (7).png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                  <a href="{% url 'product_detail' product_id=5 %}">Emperador Dark</a>
+                </div>
+                <div class="menu-ingredients">
+                  Emperador Dark is a magnificent natural stone
+                  <br> that is known for its rich, warm tones and distinctive veining.
+                  <a href="{% url 'product_detail' product_id=5 %}">Learn More</a>
+                </div>
+              </div>
+        
+              <div class="col-lg-6 menu-item filter-salads">
+                <img src="{% static 'assets\img\MARBEL\Frame 1 (8).png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                  <a href="{% url 'product_detail' product_id=9 %}">Calacatta Carrara</a>
+                </div>
+                <div class="menu-ingredients">
+                  Calacatta Carrara marble is a stunning natural stone,
+                  <br> that has been used in architecture and design for centuries
+                  <a href="{% url 'product_detail' product_id=9 %}">Learn More</a>
+                </div>
+              </div>
+             
+              <div class="col-lg-6 menu-item filter-specialty">
+                <img src="{% static 'assets\img\MARBEL\Mbl 1.png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                  <a href="{% url 'product_detail' product_id=8 %}">Panda BookMatch</a>
+                </div>
+                <div class="menu-ingredients">
+                  Panda Book Match Marble is a unique and stunning natural 
+                  <br>stone that features a distinctive black and white pattern.
+                  <br>
+                  <a href="{% url 'product_detail' product_id=8 %}">Learn More</a>
+                </div>
+              </div>
+        
+            </div>
+        
+          </div>
+        </section><!-- End Menu Section -->
+
+
+        <!-- ======= Specials Section ======= -->
+<section id="specials" class="specials">
+    <div class="container" data-aos="fade-up">
+  
+      <div class="section-title">
+        <h2>Specials</h2>
+        <p>QUARTZITE SLABS</p>
+      </div>
+  
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-3">
+          <ul class="nav nav-tabs flex-column">
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Arielle Quartzite</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Atlantis Quartzite</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Aurora Quartzite</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Portoro Quartzite</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Smeraldo Quartzite</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9 mt-4 mt-lg-0">
+          <div class="tab-content">
+            <div class="tab-pane active show" id="tab-1">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <B><h3>Arielle Quartzite</h3></B>
+                  <p class="fst-italic">Arielle Quartzite is a reminder of nature’s ability to produce wonderful and striking pieces of natural art.  Arielle Quartzite is a spectacle of copper veins against the turquoise blue background, available in both a polished and leather finish. </p>
+                  <p> The unique pattern and large slab size of this stone makes it perfect for feature walls & oversized kitchen islands.</p>
+                  <a href="{% url 'product_detail' product_id=11 %}">Learn More</a>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'assets\img\Stone\marble\circle\Frame 7.png' %}" alt="" class="img-fluid">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-2">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>Atlantis Quartzite</h3>
+                  <p class="fst-italic">Atlantis Quartzite is a durable, earthy tone stone from South America.  </p>
+                  <p>The neutral grey background has dark angular veins through. 
+                    <br> Due to the stone’s quartzite composition Atlantis Quartzite is a durable and dynamic stone perfect for use in high use areas such as kitchen workbenches.</p>
+                    <a href="{% url 'product_detail' product_id=12 %}">Learn More</a>
+                  </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="{% static 'assets\img\Stone\marble\circle\Frame 5.png' %}" alt="" class="img-fluid">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Aurora Quartzite</h3>
+                    <p class="fst-italic">Named after the vibrant polar lights, Aurora Quartzite is Nature’s artwork in its truest form. Aurora Quartzite has spectacular colorations of pastel green, grey and white. Aurora Quartzite is suitable for External and Internal applications due to its dense and durable structure. </p>
+                    <p>Aurora Quartzite has spectacular colorations of pastel green, grey and white. Aurora Quartzite is suitable for External and Internal applications due to its dense and durable structure.
+                      <br> Aurora Quartzite will certainly make a statement to any application..</p>
+                      <a href="{% url 'product_detail' product_id=13 %}">Learn More</a>
+                    </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets\img\Stone\marble\circle\Frame 4.png' %}" alt="" class="img-fluid">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Portoro Quartzite</h3>
+                    <p class="fst-italic">Portoro Quartzite is a striking natural stone consisting of an intense black background with intersecting warm rust coloured veining and silver translucent crystals that give this stone luxurious persona. </p>
+                    <p>The attractive patterns create high movement, and the distinctive veining can be incorporated into any design,
+                      from larger applications to unique detailed features that make a bold statement and stand out from the crowd </p>
+                      <a href="{% url 'product_detail' product_id=14 %}">Learn More</a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets\img\Stone\marble\circle\Frame 9 (1).png' %}" alt="" class="img-fluid">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Smeraldo Quartzite</h3>
+                    <p class="fst-italic">Smeraldo Quartzite is an alluring natural stone. 
+                      Known forts captivating emerald green background littered with dark contrasting veining. 
+                      Due to its composition as a Quartzite, Smeraldo Quartzite is a durable and dense natural stone.
+                       </p>
+                    <p>The characteristics that make marble such a sought-after product in today's designer market include its beauty, originality, luxury, and flaws. Moreover, Italian marble has long been utilized for kitchen countertops and vanities. Marble benchtops are used and appreciated for their inherent beauty and qualities.</p>
+                    <a href="{% url 'product_detail' product_id=15 %}">Learn More</a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets\img\Stone\marble\circle\Frame 3 (1).png' %}" alt="" class="img-fluid">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Specials Section -->
+  
+ <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Our stones</h2>
+            <p> We Organize Your House with great care</p>
+          </div>
+          <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="row event-item">
+                  <div class="col-lg-6">
+                    <img src="{% static 'assets\img\Stone\marble\circle\Frame 23.png' %}" class="img-fluid" alt="">
+                  </div>
+                  
+                  <div class="col-lg-6 pt-4 pt-lg-0 content">
+                 
+                    <a href="{% url 'product_detail' product_id=17 %}">Arctic Rain Dolomite</a>
+                    <div class="Example">
+                      <p><span></span></p>
+                    </div> 
+                    <p class="#">
+                      Arctic Rain Dolomite is a striking natural stone, Cool grey white background with a myriad subtle white veining and dark blue central veins.
+                       Arctic Rain Dolomite is a timeless natural stone due to its colour tones,and superior durability. Arctic Rain Dolomite is both dense and versatile,
+                        ideal for both commercial and residential applications. 
+                      The unique patterning of this vibrant stone is balance of both dark and light elements. Available in a Honed and Leather finishes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row event-item">
+                  <div class="col-lg-6">
+                    <img src="{% static 'assets\img\Stone\marble\circle\Frame 29.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  
+                   <a href="{% url 'product_detail' product_id=18 %}">Super White Dolomite</a>
+                    <div class="our stone">
+                      <p><span></span></p>
+                    </div> 
+                    <p class="#">
+                      Super White Dolomite remains one of our ever-popular stone products largely due to its modern colour tones & superior durability. 
+                      The arctic cool toned grey along with the contrasting grey veining throughout adds beautiful depth to the stone.
+                       No two blocks of Super White Dolomite possess the same beauty, they can be mottled or veined. Super White Dolomite is both dense and versatile, 
+                       ideal for both commercial and residential spaces. Super White can be used in interior spaces for flooring, 
+                      fireplaces, and other surroundings. Integrating with any design scheme, subdued or vibrant with its harmony of both light and dark elements.
+                    </p>
+                  </div>
+                </div>
+              </div><!-- End testimonial item -->
+
+              
+            <div class="swiper-slide">
+                <div class="row event-item">
+                  <div class="col-lg-6">
+                    <img src="{% static 'assets\img\Stone\marble\circle\Frame 28.png' %}" class="img-fluid" alt="">
+                    
+                  </div>
+                  <div class="col-lg-6 pt-4 pt-lg-0 content">
+                    
+                    <a href="{% url 'product_detail' product_id=16 %}">Winterfell White Dolomite</a>
+                    <div class="Our stone">
+                      <p><span></span></p>
+                    </div>
+                    <p class="#">
+                      Winterfell White Dolomite is a seamlessly beautiful natural stone. 
+                      Characterized by its cool grey distinctive veins and speckles against a white background.
+                       Winterfell White gives a fresh, serene feel to any application. 
+                      A simply stunning natural stone and blends graciously with other materials and finishes.
+                    
+                  </div>
+                </div>
+              </div><!-- End testimonial item -->
+  
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+  
+        </div>
+      </section><!-- End Events Section -->
+
+
+        {% if not request.COOKIES.pop_up_seen %}
+                                <!-- PopUp -->
+                <div class="popup hide-popup ">
+                  <div class="popup-content">
+                    <div class="popup-close">
+                      <i class='bx bx-x'></i>
+                    </div>
+                    {% comment %} <div class="popup-left"> {% endcomment %}
+                      <div class="popup-img-container">
+                        <img class="popup-img" src="{{ image_obj.image.url }}" alt="popup">
+                      </div>
+                    {% comment %} </div> {% endcomment %}
+                    {% comment %} <div class="popup-right">
+                      <div class="right-content">
+                        <h1>Welcome to <span>KBG STONE</span> </h1>
+                        <p>"Transform your space with elegance and durability - KBG Marble, your premier source for wholesale marble and granite slabs in Australia."</p>
+                        <form method="post" action="{% url 'popup' %}">
+                          {% csrf_token %}
+                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                          <br>
+                          <input type="text" class="form-control" name="number" id="number" placeholder="Your Number" required> 
+                          <br>
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+                          <br>
+                          <input type="text" class="form-control" name="postcode" id="postcode" placeholder="Your Postcode">
+                          <br>
+                          <div class="btn-menu animated fadeInUp scrollto">
+                            <button class="btn btn-outline-warning btn-lg" type="submit" value="submit" name="save">Submit</button>
+                          </div> 
+                        </form>
+                      </div>
+                    </div> {% endcomment %}
+                  </div>
+                </div>
+             {% endif %}
+                <script>
+                  // Check if the form has been submitted before
+                  if (localStorage.getItem('formSubmitted')) {                   
+                    document.querySelector('.popup').classList.add('hide-popup');
+                  }                               
+                  document.querySelector('.popup form').addEventListener('submit', function() {                    
+                    localStorage.setItem('formSubmitted', 'true');                    
+                    document.querySelector('.popup').classList.add('hide-popup');
+                    window.alert("Thank you for your Information.")
+                  });
+                  
+                  
+                </script>
+
+
+                  
+{% endblock %}

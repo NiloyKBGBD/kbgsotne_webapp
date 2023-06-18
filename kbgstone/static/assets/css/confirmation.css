@@ -1,0 +1,27 @@
+#gap{
+    margin-top: 5%;
+}
+.booking-failed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .booking-failed-message {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .booking-failed-message h1 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+
+  .booking-failed-message p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }

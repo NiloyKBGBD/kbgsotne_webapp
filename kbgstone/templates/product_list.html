@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<section class="section all-products" id="products">
+  <div class="top container" style="margin-top: 10rem;">
+
+    <h1> All Products </h1> 
+  
+  </div>
+
+  <style>
+    .top container {
+      padding-top: 10%;
+      }
+         
+     @media (max-width: 767px) {
+       .top container {
+          padding-top: 30%;
+        }
+       }
+  </style>
+
+  <div class="product-center container">
+    {% for product in products %}
+      <div class="product-item">
+        <div class="overlay">
+          <a href="" class="product-thumb">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" />
+          </a>
+          {% if product.discount_percentage %}
+            <span class="discount">{{ product.discount_percentage }}% OFF</span>
+          {% endif %}
+        </div>
+        <div class="product-info">
+          <span>{{ product.category }}</span>
+          <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
+        </div>
+        <ul class="icons">
+          <li><a href="{% url 'product_detail' product.id %}" class="bx bx-search"></a></li>
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+  

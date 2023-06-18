@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+   <section id="gap">
+  
+  <div class="booking-failed-container">
+    <div class="booking-failed-message">
+      <h1>Booking Failed!</h1>
+      <p>{{ message }}</p>
+      <p>
+       <button class="btn btn-primary" onclick="window.location.href='/appointment'">Go Back to Appointment Page</button>
+      </P>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block styles %}
+  <style>
+    
+  </style>
+ 
+
+
+{% endblock %}
